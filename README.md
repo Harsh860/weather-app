@@ -23,7 +23,7 @@ temperature :20.883333333333336 °C
 ```
 node app.js -a "New York"
 ```
-Output
+#### Output
 #### 
 ````
 formatted address :New York, NY, USA
@@ -41,7 +41,7 @@ temperature :3.6777777777777767 °C
 node app.js -a ""
 ```
 
-Output
+#### Output
 
 ```
 invalid address or address not filled
