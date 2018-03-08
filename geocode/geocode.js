@@ -13,14 +13,14 @@ var jio = function(address, callback) {
         if (error) {
             callback('cannot connect to server');
         } else if (body.status === 'ZERO_RESULTS') {
-            callback('no such address exist or google cannot find that address');
+            callback('no such address exist or google api cannot find that address');
         } else if (body.status === 'UNKNOWN_ERROR') {
             callback('cannot find address');
-        } else if (body.status === 'INVALID_REQUEST') {
+        } else if (body.status === 'INVALID_REQUEST' || body.status !== 'OK') {
             callback('invalid address or address not filled');
         } else {
 
-
+              
             callback(undefined, 'formatted address :' + body.results[0].formatted_address);
 
 
